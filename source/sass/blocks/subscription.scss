@@ -1,0 +1,333 @@
+.subscription {
+  display: flex;
+  width: 100%;
+  background-color: $color-ghost-white;
+  justify-content: center;
+  position: relative;
+}
+
+.subscription__container {
+  display: flex;
+  flex-direction: column;
+  margin: 120px 103px 80px;
+  align-items: center;
+  width: 100%;
+  max-width: 1400px;
+
+  @include vp-1199 {
+    margin: 100px 163px;
+  }
+
+  @include vp-767 {
+    margin: 63px 15px 75px;
+  }
+}
+
+.subscription::after {
+  content: url("../img/weight.png");
+  position: absolute;
+  bottom: -156px;
+  right: 0;
+  z-index: 1;
+
+  @include vp-1199 {
+    content: url("../img/weight-tab.png");
+    bottom: -132px;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.subscription__period {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 39px;
+
+  @include vp-767 {
+    width: 100%;
+    max-width: 290px;
+  }
+}
+
+.subscription__period h2 {
+  @include alumni-sans(600, 54px, 65px, $color-sapphire);
+  letter-spacing: 0.03em;
+  margin-bottom: 16px;
+
+  @include vp-1199 {
+    @include alumni-sans(600, 42px, 50px, $color-sapphire);
+    margin-left: -13px;
+    margin-bottom: 20px;
+  }
+
+  @include vp-767 {
+    @include alumni-sans(600, 32px, 38px, $color-sapphire);
+  }
+}
+
+.subscription__period-list {
+  display: flex;
+  position: relative;
+  margin-bottom: 12px;
+
+  @include vp-767 {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+.subscription__period-list::after {
+  position: absolute;
+  content: "";
+  right: 50%;
+  bottom: -12px;
+  width: 87%;
+  border: 1px solid #787878;
+  z-index: 10;
+  transform: translateX(50%);
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.subscription__period-item {
+  margin: 0 18px;
+
+  @include vp-1199 {
+    margin: 0 21px;
+  }
+
+  @include vp-767 {
+    margin: 0 -6px;
+  }
+}
+
+.subscription__period-button {
+  @include roboto-condensed(400, 20px, 30px, $color-sapphire);
+  opacity: 0.5;
+  border: none;
+  background-color: $color-transparent;
+
+  @include vp-1199 {
+    @include roboto-condensed(400, 18px, 27px, $color-sapphire);
+  }
+
+  @include vp-767 {
+    @include roboto-condensed(400, 16px, 24px, $color-sapphire);
+  }
+
+  &:hover {
+    color: $color-crimson;
+  }
+
+  &:focus {
+    color: $color-crimson;
+  }
+
+  &:active {
+    color: $color-crimson;
+    opacity: 0.8;
+  }
+}
+
+.subscription__period-button--active {
+  @include roboto-condensed(400, 20px, 30px, $color-sapphire);
+  position: relative;
+  opacity: 1;
+}
+
+.subscription__period-button--active::before {
+  position: absolute;
+  content: "";
+  right: 50%;
+  width: 90%;
+  border: 1px solid $color-crimson;
+  z-index: 15;
+  bottom: -12px;
+  transform: translateX(50%);
+
+  @include vp-767 {
+    width: 95%;
+  }
+}
+
+.subscription__rate {
+  width: 100%;
+  z-index: 2;
+}
+
+.subscription__rate-list {
+  display: grid;
+  width: 100%;
+  gap: 40px;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 40px;
+  z-index: 2;
+
+  @include vp-1199 {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    margin-bottom: 0;
+    gap: 35px;
+  }
+
+  @include vp-767 {
+    gap: 46px;
+  }
+}
+
+.subscription__rate-item {
+  background-color: $color-default-white;
+  padding: 15%;
+  border: 7px solid $color-transparent;
+  border-image: none;
+  overflow: auto;
+  aspect-ratio: 360/448;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include vp-1279 {
+    padding: 10%;
+  }
+
+  @include vp-1199 {
+    max-width: 442px;
+    width: 100%;
+    padding: 60px 69px;
+    aspect-ratio: 422/432;
+  }
+
+  @include vp-767 {
+    max-width: 290px;
+    padding: 40px 34px;
+    aspect-ratio: 290/373;
+  }
+}
+
+.subscription__rate-item-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.subscription__rate-item:hover {
+  border-image: linear-gradient(150deg, #d10a42, #00359f) 100;
+}
+
+.subscription__rate-item:hover a {
+  @include roboto-condensed(700, 12px, 14px, $color-default-white);
+  background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+  border: 2px solid;
+}
+
+.subscription__rate-item h3 {
+  @include roboto-condensed(700, 26px, 29px, $color-sapphire);
+  margin-bottom: 4%;
+
+  @include vp-767 {
+    @include roboto-condensed(700, 22px, 24px, $color-sapphire);
+  }
+}
+
+.subscription__rate-item p {
+  @include roboto-condensed(400, 16px, 24px, $color-sapphire);
+}
+
+.subscription__rate-item h4 {
+  @include roboto-condensed(700, 60px, 90px, $color-neon-blue);
+  position: relative;
+  margin-top: 28%;
+  margin-left: -46px;
+  z-index: 10;
+
+  @include vp-1199 {
+    margin-top: 23%;
+  }
+
+  @include vp-767 {
+    @include roboto-condensed(700, 48px, 72px, $color-neon-blue);
+    margin-top: 54px;
+    margin-left: -32px;
+  }
+}
+
+.subscription__rate-item h4::after {
+  content: url("../img/sprite/rouble.svg");
+  position: absolute;
+  right: -45px;
+  bottom: 47px;
+  z-index: 3;
+  width: 30px;
+  height: 42px;
+
+  @include vp-767 {
+    bottom: 39px;
+    right: -35px;
+    width: 24px;
+    height: 33px;
+  }
+}
+
+.subscription__rate-item span {
+  @include roboto-condensed(700, 100px, 150px, $color-whisper);
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  z-index: 1;
+  bottom: 0;
+  user-select: none;
+
+  @include vp-767 {
+    @include roboto-condensed(700, 80px, 120px, $color-whisper);
+  }
+}
+
+.subscription__rate-link {
+  @include roboto-condensed(700, 12px, 14px, $color-sapphire);
+  padding: 24px 0;
+  margin: 0 auto 8px;
+  border: 2px solid $color-sapphire;
+  text-transform: uppercase;
+  cursor: pointer;
+  user-select: none;
+  letter-spacing: 0.05em;
+  width: 100%;
+  max-width: 206px;
+  display: flex;
+  word-break: break-all;
+  margin-bottom: 5px;
+  justify-content: center;
+
+  @include vp-1199 {
+    width: 73%;
+    margin: 0 auto;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    padding: 24px 0;
+  }
+
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.subscription__rate-list-group-2 {
+  display: none;
+}
+
+.subscription__rate-list-group-3 {
+  display: none;
+}

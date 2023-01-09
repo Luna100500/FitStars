@@ -1,0 +1,166 @@
+.about {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 114px;
+
+  @include vp-1199 {
+    margin: 0;
+  }
+}
+
+.about__container {
+  margin: 120px 103px;
+  max-width: 1400px;
+  display: flex;
+
+  @include vp-1199 {
+    margin: 45px 45px 183px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include vp-767 {
+    margin: 63px 0 70px;
+  }
+}
+
+.about__text {
+  max-width: 355px;
+  margin-right: 85px;
+  margin-left: 61px;
+  margin-top: 38px;
+
+  @include vp-1199 {
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    margin: 56px 0 43px;
+  }
+
+  @include vp-767 {
+    margin: 0;
+    text-align: left;
+    padding: 0 15px 33px;
+  }
+}
+
+.about__text h2 {
+  @include alumni-sans(600, 48px, 58px, $color-sapphire);
+  letter-spacing: 0.03em;
+
+  @include vp-1199 {
+    @include alumni-sans(600, 42px, 50px, $color-sapphire);
+    margin-left: -16px;
+  }
+
+  @include vp-767 {
+    @include alumni-sans(600, 32px, 38px, $color-sapphire);
+    margin-left: 0;
+  }
+}
+
+.about__text h3 {
+  @include roboto-condensed(400, 18px, 27px, $color-sapphire);
+  margin-top: 7px;
+  margin-bottom: 38px;
+
+  @include vp-1199 {
+    margin-top: 0;
+    margin-bottom: 33px;
+  }
+
+  @include vp-767 {
+    margin: 5px 0 0;
+  }
+}
+
+.about__text p {
+  @include roboto-condensed(300, 16px, 24px, $color-sapphire);
+
+  @include vp-1199 {
+    margin: 0 60px;
+  }
+
+  @include vp-767 {
+    margin: 25px 0 0;
+  }
+}
+
+.about__text p:last-child {
+  margin-top: 8px;
+
+  @include vp-1199 {
+    display: none;
+  }
+}
+
+.about__visual {
+  position: relative;
+  width: 100%;
+}
+
+.about__img {
+  background-color: $color-whisper;
+
+  @include vp-767 {
+    margin-bottom: 40px;
+  }
+}
+
+.about__vid {
+  position: absolute;
+  height: 228px;
+  width: 364px;
+  overflow: hidden;
+  cursor: pointer;
+  left: -65px;
+  bottom: -114px;
+
+  @include vp-1199 {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 266px;
+    height: 167px;
+    bottom: -82px;
+  }
+
+  @include vp-767 {
+    position: relative;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 320/167;
+    bottom: 0;
+  }
+}
+
+.about__vid {
+  background-image: url("../img/about/about-vid-desk.webp");
+  width: 364px;
+  height: 228px;
+  z-index: 2;
+}
+
+.about__vid::after {
+  content: "";
+  background-color: rgba(20, 54, 122, 0.5);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.about__vid::before {
+  content: url("../img/about/about-play.svg");
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  transform: translate(-50%);
+  z-index: 3;
+
+  @include vp-1199 {
+    width: 73px;
+    height: 73px;
+  }
+}

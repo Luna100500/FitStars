@@ -1,0 +1,213 @@
+.super-games {
+  margin: 0 auto;
+  justify-content: center;
+  max-width: 1400px;
+}
+
+.super-games__container {
+  display: grid;
+  grid-template-columns: 500px auto;
+  margin: 120px 103px 106px;
+
+  @include vp-1199 {
+    grid-template-columns: 292px auto;
+    margin: 100px 45px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: auto;
+    grid-template-rows: 292px 292px;
+    margin: 74px 15px 70px;
+  }
+}
+
+.super-games__text {
+  background-color: $color-torch-red;
+  display: flex;
+  flex-direction: column;
+  padding: 85px 78px;
+  position: relative;
+  overflow: auto;
+  justify-content: space-between;
+
+  @include vp-1199 {
+    padding: 50px 45px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.super-games__text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.super-games__date {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 329px;
+
+  @include vp-1199 {
+    left: 190px;
+  }
+}
+
+.super-games__date-march {
+  position: absolute;
+  right: 30px;
+  top: 34px;
+
+  @include vp-1199 {
+    right: 13px;
+    top: 24px;
+  }
+}
+
+.super-games__text h2 {
+  @include alumni-sans(600, 82px, 79px, $color-default-white);
+  letter-spacing: 0.03em;
+  margin-bottom: 30px;
+  padding-left: 9px;
+
+  @include vp-1199 {
+    @include alumni-sans(600, 48px, 46px, $color-default-white);
+    margin-bottom: 13px;
+  }
+
+  @include vp-767 {
+    padding-left: 6px;
+    margin-bottom: 10px;
+  }
+}
+
+.super-games__text h3 {
+  @include roboto-condensed(400, 18px, 27px, $color-default-white);
+  position: relative;
+
+  @include vp-1199 {
+    @include roboto-condensed(400, 12px, 18px, $color-default-white);
+  }
+
+  @include vp-767 {
+    @include roboto-condensed(400, 10px, 15px, $color-default-white);
+  }
+}
+
+.super-games__text h4 {
+  @include roboto-condensed(400, 18px, 27px, $color-default-white);
+
+  @include vp-1199 {
+    @include roboto-condensed(400, 12px, 18px, $color-default-white);
+  }
+}
+
+.super-games__date h3:first-child::after {
+  position: absolute;
+  content: "";
+  width: 64px;
+  border: 1px solid $color-default-white;
+  bottom: 0;
+  left: 0;
+
+  @include vp-1199 {
+    width: 42px;
+  }
+}
+
+.super-games__text h3::after {
+  position: absolute;
+  content: "";
+  width: 88px;
+  border: 1px solid $color-default-white;
+  bottom: 0;
+  left: 0;
+
+  @include vp-1199 {
+    width: 56px;
+  }
+}
+
+.super-games__text p {
+  @include roboto-condensed(400, 14px, 21px, $color-default-white);
+
+  @include vp-1199 {
+    @include roboto-condensed(400, 10px, 15px, $color-default-white);
+    margin-top: -4px;
+  }
+}
+
+.super-games__text span {
+  @include roboto-condensed(700, 40px, 60px, $color-default-white);
+  margin-bottom: 5px;
+
+  @include vp-1199 {
+    @include roboto-condensed(700, 24px, 36px, $color-default-white);
+    margin-bottom: 1px;
+  }
+}
+
+.super-games__application {
+  display: flex;
+  width: 100%;
+  border: 2px solid $color-default-white;
+  padding: 27px 0;
+  margin-bottom: 4px;
+  @include roboto-condensed(700, 12px, 14px, $color-default-white);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  justify-content: center;
+
+  @include vp-1199 {
+    @include roboto-condensed(700, 10px, 12px, $color-default-white);
+    padding: 13px 0;
+    margin-top: 29px;
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+    border: 2px solid;
+  }
+
+  &:focus {
+    background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.super-games__img {
+  width: 100%;
+  background-color: #102654;
+  background-image: image-set(
+    "../img/games/games-desk.webp" 1x,
+    "../img/games/games-desk@2x.webp" 2x
+  );
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+
+  @include vp-1199 {
+    background-image: image-set(
+      "../img/games/games-tab.webp" 1x,
+      "../img/games/games-tab@2x.webp" 2x
+    );
+  }
+
+  @include vp-767 {
+    background-image: image-set(
+      "../img/games/games-mob.webp" 1x,
+      "../img/games/games-mob@2x.webp" 2x
+    );
+  }
+}
