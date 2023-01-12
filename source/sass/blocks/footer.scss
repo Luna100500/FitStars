@@ -1,0 +1,155 @@
+.footer {
+  display: flex;
+  width: 100%;
+  background-color: $color-black-russian;
+  justify-content: center;
+}
+
+.footer__container {
+  display: flex;
+  width: 100%;
+  max-width: 1400px;
+  justify-content: space-between;
+  margin: 44px 103px 32px;
+
+  @include vp-1199 {
+    margin: 44px 45px 32px;
+  }
+
+  @include vp-767 {
+    margin: 44px 15px 32px;
+    position: relative;
+    flex-direction: column;
+  }
+}
+
+.footer__logo {
+  margin-right: 40px;
+
+  @include vp-1199 {
+    margin-right: 20px;
+  }
+
+  @include vp-767 {
+    margin-top: 3px;
+    margin-bottom: 12px;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    left: 15px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    outline: 3px solid #ed0233;
+    outline-offset: 7px;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &:focus-visible {
+    outline: none;
+    outline: 3px solid #ed0233;
+  }
+}
+
+.footer__logo-svg {
+  @include vp-1199 {
+    width: 82px;
+    height: 18px;
+  }
+
+  @include vp-767 {
+    width: 68px;
+    height: 15px;
+  }
+}
+
+.footer__navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include vp-767 {
+    display: block;
+    max-width: 304px;
+    column-count: 2;
+    break-inside: auto;
+  }
+}
+
+.footer__navigation-item {
+  @include vp-767 {
+    margin-bottom: 30px;
+  }
+}
+
+.footer__navigation-item:first-child {
+  @include vp-767 {
+    margin-top: 53px;
+  }
+}
+
+.footer__navigation-item a {
+  @include roboto-condensed(400, 14px, 16px, $color-default-white);
+  margin: 0 20px;
+
+  @include vp-767 {
+    margin-right: 0;
+    margin-bottom: 18px;
+    margin-top: 40px;
+  }
+
+  &:hover {
+    color: $color-crimson;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    color: $color-crimson;
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: $color-crimson;
+    opacity: 0.7;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.footer__social-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  @include vp-767 {
+    width: min-content;
+  }
+}
+
+.footer__social-link {
+  margin: 0 2px;
+  padding: 3px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+}

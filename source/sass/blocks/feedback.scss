@@ -68,6 +68,8 @@
 }
 
 .feedback__img {
+  background-color: $color-grey;
+  border-radius: 50%;
   position: absolute;
   top: 65px;
   left: 65px;

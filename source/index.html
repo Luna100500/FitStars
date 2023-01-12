@@ -551,6 +551,7 @@
           </div>
         </div>
       </section>
+
       <section class="feedback">
         <div class="feedback__container">
           <h2>Отзывы</h2>
@@ -579,24 +580,27 @@
       <section class="contacts">
         <div class="contacts__container">
           <div class="form">
-            <h3>Бесплатное занятие</h3>
-            <form class="form mask" id="form-mask" action="https://echo.htmlacademy.ru" method="post">
-              <fieldset class="form__fieldset">
-                <div class="form__name">
-                  <label>
-                    <input type="text" name="name" pattern="^[a-zA-Zа-яА-Я\-\s]*$" placeholder="Имя" required>
-                  </label>
-                </div>
-                <div class="form__phone">
-                  <label>
-                    <input type="tel" id="phone-mask" name="phone" placeholder="Телефон" minlength="11" maxlength="11"
-                      required>
-                  </label>
-                </div>
-                <button type="submit" class="form__button-send">отправить</button>
-              </fieldset>
-            </form>
+            <div class="form__container">
+              <h3>Бесплатное занятие</h3>
+              <form class="form__contacts mask" id="form-mask" action="https://echo.htmlacademy.ru" method="post">
+                <fieldset class="form__fieldset">
+                  <div class="form__name">
+                    <label>
+                      <input type="text" name="name" pattern="^[a-zA-Zа-яА-Я\-\s]*$" placeholder="Имя" required>
+                    </label>
+                  </div>
+                  <div class="form__phone">
+                    <label>
+                      <input type="tel" id="phone-mask" name="phone" placeholder="Телефон" minlength="11" maxlength="11"
+                        required>
+                    </label>
+                  </div>
+                  <button type="submit" class="form__button-send">отправить</button>
+                </fieldset>
+              </form>
+            </div>
           </div>
+
           <div class="contacts__section">
             <h3>Контакты</h3>
             <ul class="contacts__list reset-list">
@@ -623,33 +627,34 @@
           </div>
         </div>
       </section>
+
     </main>
     <footer class="footer">
       <div class="footer__container">
-        <a class="footer__logo">
+        <a class="footer__logo" href="#">
           <svg width="122" height="44" class="footer__logo-svg">
             <use xlink:href="./img/sprite.svg#logo-footer"></use>
           </svg>
         </a>
         <ul class="footer__navigation-list reset-list">
           <li class="footer__navigation-item">
-            Услуги
+            <a href="#">Услуги</a>
           </li>
 
           <li class="footer__navigation-item">
-            Абонементы
+            <a href="#">Абонементы</a>
           </li>
 
           <li class="footer__navigation-item">
-            Акции
+            <a href="#">Акции</a>
           </li>
 
           <li class="footer__navigation-item">
-            Тренеры
+            <a href="#">Тренеры</a>
           </li>
 
           <li class="footer__navigation-item">
-            Расписание
+            <a href="#">Расписание</a>
           </li>
         </ul>
 

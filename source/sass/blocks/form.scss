@@ -1,0 +1,115 @@
+.form {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+
+  @include vp-1199 {
+    justify-content: center;
+    background-color: $color-sapphire;
+  }
+}
+
+.form__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-right: 170px;
+  padding-bottom: 50px;
+
+  @include vp-1199 {
+    padding: 70px 162px 68px 133px;
+  }
+
+  @include vp-767 {
+    padding: 70px 15px 68px 15px;
+  }
+}
+
+.form__container h3 {
+  @include alumni-sans(800, 54px, 84px, $color-default-white);
+  letter-spacing: 0.03em;
+
+  @include vp-1199 {
+    @include alumni-sans(700, 42px, 50px, $color-default-white);
+  }
+
+  @include vp-767 {
+    @include alumni-sans(600, 32px, 38px, $color-default-white);
+  }
+}
+
+.form__fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.form__fieldset input {
+  background-color: $color-transparent;
+  color: $color-default-white;
+  border: none;
+  border-bottom: 1px solid #74819c;
+  padding: 10px 0;
+  width: 100%;
+
+  &:hover {
+    border-bottom: 1px solid $color-crimson;
+    opacity: 0.8;
+  }
+
+  &:focus {
+    border-bottom: 1px solid $color-crimson;
+  }
+
+  &:active {
+    border-bottom: 1px solid $color-torch-red;
+    opacity: 0.8;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+::placeholder {
+  @include roboto-condensed(400, 14px, 16px, $color-default-white);
+}
+
+.form__button-send {
+  grid-column: 1/3;
+  grid-row: 2/3;
+  background-color: $color-transparent;
+  border: 3px solid $color-default-white;
+  @include roboto-condensed(700, 14px, 16px, $color-default-white);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 20px 0;
+
+  &:hover {
+    background-color: $color-whisper;
+    @include roboto-condensed(700, 14px, 16px, $color-sapphire);
+  }
+
+  &:focus {
+    background-color: $color-whisper;
+    border: 3px solid $color-torch-red;
+    @include roboto-condensed(700, 14px, 16px, $color-torch-red);
+  }
+
+  &:active {
+    background-color: $color-whisper;
+    opacity: 0.8;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+}

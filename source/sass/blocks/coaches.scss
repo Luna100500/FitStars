@@ -84,6 +84,7 @@
 
 .coaches__img {
   height: 100%;
+  background-color: $color-whisper;
 
   @include vp-1199 {
     width: 268px;

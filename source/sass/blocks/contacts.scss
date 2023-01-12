@@ -1,0 +1,117 @@
+.contacts {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #74819c;
+  background: linear-gradient(to right, #102654 0% 50%, #fff 50% 100%);
+
+  @include vp-1199 {
+    background: $color-default-white;
+  }
+}
+
+.contacts__container {
+  display: flex;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 103px;
+
+  @include vp-1199 {
+    flex-direction: column;
+    margin: 0;
+  }
+}
+
+.contacts__section {
+  width: 100%;
+  padding-left: 120px;
+
+  @include vp-1199 {
+    padding: 72px 133px 45px;
+  }
+
+  @include vp-767 {
+    padding: 0 15px 45px;
+  }
+}
+
+.contacts__section h3 {
+  @include alumni-sans(600, 54px, 84px, $color-sapphire);
+  letter-spacing: 0.03em;
+
+  @include vp-1199 {
+    @include alumni-sans(600, 42px, 50px, $color-sapphire);
+  }
+
+  @include vp-767 {
+    @include alumni-sans(600, 32px, 38px, $color-sapphire);
+  }
+}
+
+.contacts__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  column-gap: 120px;
+  position: relative;
+  @include roboto-condensed(400, 14px, 21px, $color-sapphire);
+
+  @include vp-1199 {
+    @include roboto-condensed(400, 18px, 27px, $color-sapphire);
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.contacts__list::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 67%;
+  background-color: #74819c;
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.contacts__item a {
+  &:hover {
+    color: $color-crimson;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    color: $color-crimson;
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: $color-crimson;
+    opacity: 0.7;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.contacts__item h4 {
+  @include roboto-condensed(700, 16px, 24px, $color-sapphire);
+
+  @include vp-1199 {
+    @include roboto-condensed(700, 20px, 30px, $color-sapphire);
+  }
+}
+
+.contacts__item address {
+  text-decoration: none;
+  font-style: normal;
+}
