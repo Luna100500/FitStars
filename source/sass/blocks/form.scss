@@ -55,6 +55,7 @@
 .form__fieldset input {
   background-color: $color-transparent;
   color: $color-default-white;
+  cursor: text;
   border: none;
   border-bottom: 1px solid #74819c;
   padding: 10px 0;
@@ -92,6 +93,7 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   padding: 20px 0;
+  cursor: pointer;
 
   &:hover {
     background-color: $color-whisper;

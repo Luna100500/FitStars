@@ -108,9 +108,11 @@
 
 .subscription__period-button {
   @include roboto-condensed(400, 20px, 30px, $color-sapphire);
-  opacity: 0.5;
   border: none;
   background-color: $color-transparent;
+  opacity: 0.5;
+  cursor: pointer;
+  user-select: none;
 
   @include vp-1199 {
     @include roboto-condensed(400, 18px, 27px, $color-sapphire);
@@ -138,6 +140,7 @@
   @include roboto-condensed(400, 20px, 30px, $color-sapphire);
   position: relative;
   opacity: 1;
+  cursor: auto;
 }
 
 .subscription__period-button--active::before {
@@ -178,6 +181,10 @@
   @include vp-767 {
     gap: 46px;
   }
+}
+
+.subscription__rate-list--hidden {
+  display: none;
 }
 
 .subscription__rate-item {
@@ -322,12 +329,4 @@
   &:active {
     opacity: 0.8;
   }
-}
-
-.subscription__rate-list-group-2 {
-  display: none;
-}
-
-.subscription__rate-list-group-3 {
-  display: none;
 }
