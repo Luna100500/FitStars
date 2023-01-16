@@ -64,7 +64,7 @@
     @include alumni-sans(600, 72px, 86px, $color-default-white);
     text-transform: none;
     margin-top: 8px;
-    text-shadow: 4px 0px $color-default-white;
+    text-shadow: 4px 00 $color-default-white;
   }
 
   @include vp-767 {
@@ -105,7 +105,7 @@
   }
 
   @include vp-374 {
-    margin-right: -20px;
+    margin-right: -12px;
   }
 }
 
@@ -113,6 +113,7 @@
   order: 3;
   width: 230px;
   padding: 20px 0;
+
   @include roboto-condensed(700, 12px, 14px, $color-default-white);
   background-color: $color-transparent;
   border: 4px solid $color-default-white;
@@ -161,6 +162,7 @@
 .intro__img {
   background-color: $color-resolution-blue;
   margin-right: 100px;
+  width: 500px;
 
   @include vp-1279 {
     margin-top: 31px;
@@ -170,9 +172,18 @@
   @include vp-1199 {
     margin-right: 0;
     margin-top: 37px;
+    width: 324px;
   }
 
   @include vp-767 {
     display: none;
+  }
+}
+
+.intro__img-trainer {
+  width: 500px;
+
+  @include vp-1199 {
+    width: 324px;
   }
 }

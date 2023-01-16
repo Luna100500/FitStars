@@ -43,7 +43,6 @@
 .advantages__list {
   display: grid;
   grid-template-columns: 1fr 240px 1fr;
-  // grid-auto-rows: minmax(180px, auto);
   max-width: 1040px;
   column-gap: 60px;
   row-gap: 57px;
@@ -51,8 +50,7 @@
   @include vp-1199 {
     grid-template-columns: 1fr 1fr;
     column-gap: 30px;
-    // grid-auto-rows: minmax(80px, auto);
-    row-gap: 22px;
+    row-gap: 20px;
   }
 
   @include vp-767 {
@@ -101,7 +99,7 @@
   }
 
   @include vp-767 {
-    margin: 8px 0 0;
+    margin: 6px 0 0;
     align-items: center;
     text-align: center;
   }
@@ -113,16 +111,17 @@
 
   @include vp-1199 {
     margin-bottom: 0;
+
     @include roboto-condensed(700, 20px, 30px, $color-sapphire);
   }
 }
 
 .advantages__text p {
   @include roboto-condensed(300, 16px, 22px, $color-sapphire);
-}
 
-.advantages__item-accent {
-  background-color: $color-sapphire;
+  @include vp-1199 {
+    margin-top: 4px;
+  }
 }
 
 .advantages__value-accent span {
@@ -132,6 +131,7 @@
 
   @include vp-1199 {
     @include roboto-condensed(700, 74px, 111px, $color-default-white);
+    margin-left: -6px;
   }
 }
 
@@ -149,7 +149,7 @@
   }
 }
 
-.advantages__item:first-child {
+.advantages__item-1 {
   margin-left: 20px;
   position: relative;
 
@@ -158,7 +158,7 @@
   }
 }
 
-.advantages__item:first-child::after {
+.advantages__item-1::after {
   position: absolute;
   content: "";
   bottom: 0;
@@ -171,11 +171,11 @@
   }
 }
 
-.advantages__item:nth-child(2) {
+.advantages__item-2 {
   position: relative;
 }
 
-.advantages__item:nth-child(2)::after {
+.advantages__item-2::after {
   position: absolute;
   content: "";
   bottom: 0;
@@ -187,11 +187,15 @@
   }
 }
 
-.advantages__item:nth-child(4) {
+.advantages__item-4 {
   margin-left: 20px;
 
   @include vp-1199 {
     margin-left: 0;
+  }
+
+  @include vp-767 {
+    padding-top: 7px;
   }
 }
 
@@ -205,7 +209,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: $color-resolution-blue;
+  background-color: $color-sapphire;
 
   @include vp-1199 {
     grid-column: 1/-1;
@@ -217,7 +221,8 @@
   }
 
   @include vp-767 {
-    margin-top: 5px;
+    max-width: 100%;
+    margin: 0;
     padding: 20px 51px 36px;
   }
 }
@@ -242,11 +247,11 @@
 
   @include vp-1199 {
     @include roboto-condensed(700, 22px, 33px, $color-default-white);
-    margin-bottom: 15px;
+    margin-bottom: 11px;
   }
 
   @include vp-767 {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 }
 

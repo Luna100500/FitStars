@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   border-top: 1px solid #74819c;
-  background: linear-gradient(to right, #102654 0% 50%, #fff 50% 100%);
+  background: linear-gradient(to right, #102654 0% 50%, #ffffff 50% 100%);
 
   @include vp-1199 {
     background: $color-default-white;
@@ -14,7 +14,7 @@
   display: flex;
   width: 100%;
   max-width: 1400px;
-  margin: 0 103px;
+  margin: 0 103px 19px;
 
   @include vp-1199 {
     flex-direction: column;
@@ -25,44 +25,55 @@
 .contacts__section {
   width: 100%;
   padding-left: 120px;
+  padding-top: 47px;
 
   @include vp-1199 {
-    padding: 72px 133px 45px;
+    padding: 63px 101px 62px;
   }
 
   @include vp-767 {
-    padding: 0 15px 45px;
+    padding: 65px 15px 61px;
   }
 }
 
 .contacts__section h3 {
   @include alumni-sans(600, 54px, 84px, $color-sapphire);
   letter-spacing: 0.03em;
+  margin-left: 32px;
+  margin-bottom: 27px;
 
   @include vp-1199 {
     @include alumni-sans(600, 42px, 50px, $color-sapphire);
+    margin-bottom: 30px;
   }
 
   @include vp-767 {
     @include alumni-sans(600, 32px, 38px, $color-sapphire);
+    margin-left: 0;
+    margin-bottom: 34px;
   }
 }
 
 .contacts__list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  column-gap: 120px;
+  row-gap: 18px;
+  column-gap: 100px;
   position: relative;
+  margin-left: 35px;
+
   @include roboto-condensed(400, 14px, 21px, $color-sapphire);
 
   @include vp-1199 {
     @include roboto-condensed(400, 18px, 27px, $color-sapphire);
+    margin-left: 32px;
+    column-gap: 70px;
   }
 
   @include vp-767 {
     display: flex;
     flex-direction: column;
+    margin-left: 0;
   }
 }
 
@@ -74,7 +85,7 @@
   left: 50%;
   transform: translateX(-50%);
   width: 1px;
-  height: 67%;
+  height: 89%;
   background-color: #74819c;
 
   @include vp-767 {
@@ -82,7 +93,45 @@
   }
 }
 
+.contacts__item:nth-child(2n) {
+  margin-left: 12px;
+
+  @include vp-767 {
+    margin-left: 0;
+  }
+}
+
+.contacts__item-1 {
+  @include vp-767 {
+    order: 0;
+  }
+}
+
+.contacts__item-2 {
+  @include vp-767 {
+    order: 2;
+  }
+}
+
+.contacts__item-3 {
+  @include vp-767 {
+    order: 1;
+  }
+}
+
+.contacts__item-4 {
+  @include vp-767 {
+    order: 3;
+  }
+}
+
+.contacts__item p {
+  letter-spacing: -0.02em;
+}
+
 .contacts__item a {
+  letter-spacing: -0.02em;
+
   &:hover {
     color: $color-crimson;
     text-decoration: underline;
@@ -104,14 +153,18 @@
 }
 
 .contacts__item h4 {
+  margin-bottom: 3px;
+
   @include roboto-condensed(700, 16px, 24px, $color-sapphire);
 
   @include vp-1199 {
     @include roboto-condensed(700, 20px, 30px, $color-sapphire);
+    margin-bottom: 7px;
   }
 }
 
 .contacts__item address {
+  letter-spacing: -0.02em;
   text-decoration: none;
   font-style: normal;
 }

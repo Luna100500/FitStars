@@ -1,10 +1,20 @@
 const item = document.querySelectorAll(".coaches__info");
-const preview = document.querySelectorAll(".coaches__preview");
+const preview = document.querySelector(".coaches__preview");
 const catalogItem = document.querySelectorAll(".coaches__item");
+const swiper = document.getElementsByClassName("swiper")[0];
+const coachesPreviews = Array.from(
+  swiper.getElementsByClassName("coaches__preview")
+);
+const cardNames = coachesPreviews
+  .map((coachesPreview) => coachesPreview.querySelector("h3"))
+  .flat();
 
 const showPreview = () => {
   for (let i = 0; i < item.length; i++) {
     item[i].style.zIndex = "-1";
+  }
+  for (let i = 0; i < item.length; i++) {
+    cardNames[i].style.display = "block";
   }
 };
 
@@ -13,13 +23,11 @@ showPreview();
 for (let i = 0; i < catalogItem.length; i++) {
   setTimeout(1000);
   catalogItem[i].onmouseover = function () {
-    // preview[i].style.zIndex = "-1";
-    // preview[i].style.display = "none";
+    cardNames[i].style.display = "none";
     item[i].style.zIndex = "1";
   };
   catalogItem[i].onmouseout = function () {
-    // preview[i].style.zIndex = "1";
-    // preview[i].style.display = "flex";
+    cardNames[i].style.display = "block";
     item[i].style.zIndex = "-1";
   };
 }

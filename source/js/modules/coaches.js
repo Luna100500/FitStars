@@ -1,10 +1,24 @@
 import "../../js/vendor/swiper.js";
 
-const prevBtn = document.querySelector(".trainers__swiper-button-prev");
-const nextBtn = document.querySelector(".trainers__swiper-button-next");
+const prevBtn = document.querySelector(".coaches__swiper-button-prev");
+const nextBtn = document.querySelector(".coaches__swiper-button-next");
+const coachesList = document.querySelector(".coaches__list");
+const coachesItem = document.getElementsByClassName("coaches__item");
 
-const currentSwiper = new Swiper(".swiper", {
-  spaceBetween: 0,
+const initCoachesSwiper = () => {
+  prevBtn.style.display = "block";
+  nextBtn.style.display = "block";
+  coachesList.style.gap = "0";
+  coachesList.classList.add("swiper-wrapper");
+  for (let i = 0; i < coachesItem.length; i++) {
+    coachesItem[i].classList.add("swiper-slide");
+  }
+};
+
+initCoachesSwiper();
+
+const currentSwiper = new Swiper(".coaches .swiper", {
+  spaceBetween: 40,
   slidesPerView: 1,
   rewind: true,
 
@@ -13,12 +27,12 @@ const currentSwiper = new Swiper(".swiper", {
     // when window width is >= 768px
     768: {
       slidesPerView: 2,
-      spaceBetween: 0,
+      spaceBetween: 30,
     },
     // when window width is >= 1200px
     1200: {
       slidesPerView: 4,
-      spaceBetween: 0,
+      spaceBetween: 40,
     },
   },
 });
@@ -31,63 +45,14 @@ nextBtn.addEventListener("click", () => {
   currentSwiper.slideNext();
 });
 
-/* const trainersSwiperPrevSlideButton = document.querySelector(
-  ".trainers__swiper-button-prev"
-);
-const trainersSwiperNextSlideButton = document.querySelector(
-  ".trainers__swiper-button-next"
-);
+prevBtn.addEventListener("keydown", (evt) => {
+  if (evt.keyCode === 13) {
+    currentSwiper.slidePrev();
+  }
+});
 
-const initTrainersSwiper = () => {
-  trainersSwiperPrevSlideButton.style.display = "block";
-  trainersSwiperNextSlideButton.style.display = "block";
-
-  let trainersSwiper = new Swiper(".tags-list", {
-    spaceBetween: 40,
-    slidesPerView: 1,
-    rewind: true,
-
-    // Responsive breakpoints
-    breakpoints: {
-      // when window width is >= 768px
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 30,
-      },
-      // when window width is >= 1200px
-      1200: {
-        slidesPerView: 4,
-        spaceBetween: 40,
-      },
-    },
-  });
-
-  // Навешиваем переключение слайдов по нажатию мышкой на кнопки
-  trainersSwiperPrevSlideButton.addEventListener("click", () => {
-    trainersSwiper.slidePrev();
-  });
-
-  trainersSwiperNextSlideButton.addEventListener("click", () => {
-    trainersSwiper.slideNext();
-  });
-
-  // Навешиваем переключение слайдов по нажатию Enter на кнопке
-  trainersSwiperPrevSlideButton.addEventListener("keydown", (evt) => {
-    if (evt.keyCode === 13) {
-      trainersSwiper.slidePrev();
-    }
-  });
-
-  trainersSwiperNextSlideButton.addEventListener("keydown", (evt) => {
-    if (evt.keyCode === 13) {
-      trainersSwiper.slideNext();
-    }
-  });
-}; */
-
-// export const initSwipers = () => {
-//   initReviewsSwiper();
-//   initTrainersSwiper();
-// };
-
-/* initTrainersSwiper(); */
+nextBtn.addEventListener("keydown", (evt) => {
+  if (evt.keyCode === 13) {
+    currentSwiper.slideNext();
+  }
+});

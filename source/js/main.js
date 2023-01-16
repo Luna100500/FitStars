@@ -6,6 +6,7 @@ import "./modules/form";
 import "./modules/cards";
 import "./modules/coaches";
 import "./modules/tab";
+import "./modules/feedback";
 
 // ---------------------------------
 

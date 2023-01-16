@@ -10,14 +10,14 @@
   width: 100%;
   max-width: 1400px;
   justify-content: space-between;
-  margin: 44px 103px 32px;
+  margin: 44px 103px 25px;
 
   @include vp-1199 {
-    margin: 44px 45px 32px;
+    margin: 46px 45px 32px;
   }
 
   @include vp-767 {
-    margin: 44px 15px 32px;
+    margin: 44px 15px 45px;
     position: relative;
     flex-direction: column;
   }
@@ -36,7 +36,7 @@
     font-size: 20px;
     position: absolute;
     top: 0;
-    left: 15px;
+    left: 0;
   }
 
   &:hover {
@@ -53,7 +53,6 @@
   }
 
   &:focus-visible {
-    outline: none;
     outline: 3px solid #ed0233;
   }
 }
@@ -73,24 +72,31 @@
 .footer__navigation-list {
   display: flex;
   flex-wrap: wrap;
+  margin-left: -35px;
+
+  @include vp-1199 {
+    margin-left: -6px;
+  }
 
   @include vp-767 {
     display: block;
     max-width: 304px;
     column-count: 2;
     break-inside: auto;
+    margin-left: -14px;
+    margin-bottom: 18px;
   }
 }
 
 .footer__navigation-item {
   @include vp-767 {
-    margin-bottom: 30px;
+    margin-bottom: 16px;
   }
 }
 
 .footer__navigation-item:first-child {
   @include vp-767 {
-    margin-top: 53px;
+    margin-top: 42px;
   }
 }
 
@@ -98,10 +104,15 @@
   @include roboto-condensed(400, 14px, 16px, $color-default-white);
   margin: 0 20px;
 
+  @include vp-1199 {
+    margin: 0 15px;
+  }
+
   @include vp-767 {
     margin-right: 0;
     margin-bottom: 18px;
     margin-top: 40px;
+    letter-spacing: 0.04em;
   }
 
   &:hover {
@@ -130,12 +141,18 @@
 
   @include vp-767 {
     width: min-content;
+    margin-left: -4px;
   }
 }
 
 .footer__social-link {
   margin: 0 2px;
   padding: 3px;
+
+  @include vp-767 {
+    margin: 0;
+    padding: 5px;
+  }
 
   &:hover {
     opacity: 0.8;
@@ -152,4 +169,9 @@
   &:focus-visible {
     outline: none;
   }
+}
+
+.footer__link-svg {
+  width: 25px;
+  height: 25px;
 }

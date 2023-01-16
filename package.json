@@ -56,8 +56,7 @@
     "stylelint": "13.13.1",
     "webpack": "4.42.0",
     "webpack-stream": "5.2.1",
-    "imask": "6.4.3",
-    "pristinejs": "0.1.9"
+    "imask": "6.4.3"
   },
   "engines": {
     "node": ">=16.15.1"
