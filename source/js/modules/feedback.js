@@ -1,4 +1,4 @@
-import Swiper from '../../js/vendor/swiper.js';
+// import Swiper from '../../js/vendor/swiper.js';
 
 const prevFeedbackBtn = document.querySelector('.feedback__swiper-button-prev');
 const nextFeedbackBtn = document.querySelector('.feedback__swiper-button-next');
