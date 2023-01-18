@@ -17,6 +17,7 @@ const initFeedbackSwiper = () => {
 
 initFeedbackSwiper();
 
+// eslint-disable-next-line no-undef
 const feedbackSwiper = new Swiper('.feedback .swiper', {
   spaceBetween: 20,
   slidesPerView: 1,

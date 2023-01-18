@@ -18,6 +18,7 @@ const initCoachesSwiper = () => {
 
 initCoachesSwiper();
 
+// eslint-disable-next-line no-undef
 const currentSwiper = new Swiper('.coaches .swiper', {
   spaceBetween: 40,
   slidesPerView: 1,
