@@ -1,16 +1,16 @@
-import { iosVhFix } from "./utils/ios-vh-fix";
-import { initModals } from "./modules/modals/init-modals";
-import "./modules/video";
-import "./modules/scroll";
-import "./modules/form";
-import "./modules/cards";
-import "./modules/coaches";
-import "./modules/tab";
-import "./modules/feedback";
+import {iosVhFix} from './utils/ios-vh-fix';
+// import { initModals } from './modules/modals/init-modals';
+import './modules/video';
+import './modules/scroll';
+import './modules/form';
+import './modules/cards';
+import './modules/coaches';
+import './modules/tab';
+import './modules/feedback';
 
 // ---------------------------------
 
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener('DOMContentLoaded', () => {
   // Utils
   // ---------------------------------
 
@@ -21,8 +21,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
-  window.addEventListener("load", () => {
-    initModals();
+  window.addEventListener('load', () => {
+    // initModals();
   });
 });
 

@@ -1,13 +1,7 @@
-import iMask from "imask";
-
-document.addEventListener("submit", (event) => {
-  if (!form.validate()) {
-    event.preventDefault();
-  }
-});
+import iMask from 'imask';
 
 const maskOptions = {
-  mask: "00000000000",
+  mask: '00000000000',
 };
 
-iMask(document.querySelector("#phone-mask"), maskOptions);
+iMask(document.querySelector('#phone-mask'), maskOptions);

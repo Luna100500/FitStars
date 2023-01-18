@@ -3480,7 +3480,8 @@ button,
   text-transform: uppercase;
   padding: 16px 0;
   cursor: pointer;
-  margin-top: -1px;
+  width: 100%;
+  margin-top: 28px;
 }
 
 .form__button-send:hover {
@@ -3563,7 +3564,7 @@ button,
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-left: -35px;
+  margin-left: -25px;
 }
 
 .footer__navigation-item a {

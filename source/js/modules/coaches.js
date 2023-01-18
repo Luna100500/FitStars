@@ -1,23 +1,24 @@
-import "../../js/vendor/swiper.js";
+// import Swiper from '../../js/vendor/swiper.js';
 
-const prevBtn = document.querySelector(".coaches__swiper-button-prev");
-const nextBtn = document.querySelector(".coaches__swiper-button-next");
-const coachesList = document.querySelector(".coaches__list");
-const coachesItem = document.getElementsByClassName("coaches__item");
+const prevBtn = document.querySelector('.coaches__swiper-button-prev');
+const nextBtn = document.querySelector('.coaches__swiper-button-next');
+const coachesList = document.querySelector('.coaches__list');
+const coachesItem = document.getElementsByClassName('coaches__item');
 
 const initCoachesSwiper = () => {
-  prevBtn.style.display = "block";
-  nextBtn.style.display = "block";
-  coachesList.style.gap = "0";
-  coachesList.classList.add("swiper-wrapper");
+  prevBtn.style.display = 'block';
+  nextBtn.style.display = 'block';
+  coachesList.style.display = 'flex';
+  coachesList.style.gap = '0';
+  coachesList.classList.add('swiper-wrapper');
   for (let i = 0; i < coachesItem.length; i++) {
-    coachesItem[i].classList.add("swiper-slide");
+    coachesItem[i].classList.add('swiper-slide');
   }
 };
 
 initCoachesSwiper();
 
-const currentSwiper = new Swiper(".coaches .swiper", {
+const currentSwiper = new Swiper('.coaches .swiper', {
   spaceBetween: 40,
   slidesPerView: 1,
   rewind: true,
@@ -37,21 +38,21 @@ const currentSwiper = new Swiper(".coaches .swiper", {
   },
 });
 
-prevBtn.addEventListener("click", () => {
+prevBtn.addEventListener('click', () => {
   currentSwiper.slidePrev();
 });
 
-nextBtn.addEventListener("click", () => {
+nextBtn.addEventListener('click', () => {
   currentSwiper.slideNext();
 });
 
-prevBtn.addEventListener("keydown", (evt) => {
+prevBtn.addEventListener('keydown', (evt) => {
   if (evt.keyCode === 13) {
     currentSwiper.slidePrev();
   }
 });
 
-nextBtn.addEventListener("keydown", (evt) => {
+nextBtn.addEventListener('keydown', (evt) => {
   if (evt.keyCode === 13) {
     currentSwiper.slideNext();
   }
