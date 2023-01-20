@@ -93,6 +93,11 @@
   }
 }
 
+.contacts__item {
+  display: flex;
+  flex-direction: column;
+}
+
 .contacts__item:nth-child(2n) {
   margin-left: 12px;
 

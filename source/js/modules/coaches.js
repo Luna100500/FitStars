@@ -22,7 +22,13 @@ initCoachesSwiper();
 const currentSwiper = new Swiper('.coaches .swiper', {
   spaceBetween: 40,
   slidesPerView: 1,
-  rewind: true,
+  loop: 'true',
+  initialSlide: 0,
+
+  keyboard: {
+    enabled: true,
+    onlyInViewport: false,
+  },
 
   // Responsive breakpoints
   breakpoints: {
@@ -58,3 +64,4 @@ nextBtn.addEventListener('keydown', (evt) => {
     currentSwiper.slideNext();
   }
 });
+

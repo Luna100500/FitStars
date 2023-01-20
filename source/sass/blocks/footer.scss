@@ -141,7 +141,7 @@
 
   @include vp-767 {
     width: min-content;
-    margin-left: -4px;
+    gap: 11px;
   }
 }
 
@@ -151,7 +151,7 @@
 
   @include vp-767 {
     margin: 0;
-    padding: 5px;
+    padding: 0;
   }
 
   &:hover {

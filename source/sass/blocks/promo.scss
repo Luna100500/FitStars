@@ -154,6 +154,7 @@
 
 .promo__left-img {
   background-color: $color-steel-blue;
+  height: fit-content;
 
   @include vp-767 {
     width: 100%;
@@ -172,7 +173,6 @@
 
 .promo__right-list {
   display: grid;
-  grid-auto-rows: 211px;
   grid-template-columns: 1fr;
   gap: 40px;
 
@@ -197,7 +197,7 @@
   border-style: solid;
   border-image-slice: 1;
   border-image-source: linear-gradient(160deg, #b80027, 60%, #00359f);
-  overflow: auto;
+  min-height: 211px;
 
   @include vp-767 {
     align-items: center;
@@ -216,6 +216,7 @@
 .promo__right-item p {
   @include roboto-condensed(400, 16px, 140%, $color-resolution-blue);
   margin-top: 4px;
+  margin-bottom: 20px;
 
   @include vp-767 {
     text-align: center;

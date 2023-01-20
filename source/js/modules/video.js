@@ -29,6 +29,6 @@ const hidePoster = () => {
     videoButton[i].classList.add('about__vid-play--hidden');
   }
   for (let i = 0; i < videoPoster.length; i++) {
-    videoPoster[i].classList.add('about__vid-poster--hidden');
+    videoPoster[i].style.zIndex = '-20';
   }
 };

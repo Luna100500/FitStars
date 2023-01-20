@@ -21,7 +21,7 @@ initFeedbackSwiper();
 const feedbackSwiper = new Swiper('.feedback .swiper', {
   spaceBetween: 20,
   slidesPerView: 1,
-  rewind: true,
+  loop: false,
 
   // Responsive breakpoints
   breakpoints: {

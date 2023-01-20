@@ -6,8 +6,12 @@
 
 .super-games__container {
   display: grid;
-  grid-template-columns: 500px auto;
-  margin: 120px 103px 106px;
+  grid-template-columns: 43% 57%;
+  margin: 118px 103px 106px;
+
+  @include vp-1279 {
+    margin: 100px 65px 106px;
+  }
 
   @include vp-1199 {
     grid-template-columns: 292px auto;
@@ -16,7 +20,7 @@
 
   @include vp-767 {
     grid-template-columns: auto;
-    grid-template-rows: auto 292px;
+    grid-template-rows: auto auto;
     margin: 74px 15px 50px;
   }
 }
@@ -25,7 +29,7 @@
   background-color: $color-torch-red;
   display: flex;
   flex-direction: column;
-  padding: 85px 78px;
+  padding: 85px 78px 80px;
   position: relative;
   overflow: auto;
   justify-content: space-between;
@@ -43,6 +47,7 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 39px;
+  position: relative;
 
   @include vp-1199 {
     margin-bottom: 0;
@@ -53,10 +58,10 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  left: 329px;
+  left: 249px;
 
   @include vp-1199 {
-    left: 190px;
+    left: 147px;
   }
 }
 
@@ -196,25 +201,30 @@
 .super-games__img {
   width: 100%;
   background-color: #102654;
-  background-image: image-set(
-    "../img/games/games-desk.webp" 1x,
-    "../img/games/games-desk@2x.webp" 2x
-  );
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
+  // background-image: image-set(
+  //   "../img/games/games-desk.webp" 1x,
+  //   "../img/games/games-desk@2x.webp" 2x
+  // );
+  // background-repeat: no-repeat;
+  // background-position: 50% 50%;
+  // background-size: cover;
 
   @include vp-1199 {
-    background-image: image-set(
-      "../img/games/games-tab.webp" 1x,
-      "../img/games/games-tab@2x.webp" 2x
-    );
+    // background-image: image-set(
+    //   "../img/games/games-tab.webp" 1x,
+    //   "../img/games/games-tab@2x.webp" 2x
+    // );
   }
 
   @include vp-767 {
-    background-image: image-set(
-      "../img/games/games-mob.webp" 1x,
-      "../img/games/games-mob@2x.webp" 2x
-    );
+    // background-image: image-set(
+    //   "../img/games/games-mob.webp" 1x,
+    //   "../img/games/games-mob@2x.webp" 2x
+    // );
   }
+}
+
+.super-games__img-photo {
+  height: 100%;
+  width: 100%;
 }

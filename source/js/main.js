@@ -1,7 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import './modules/video';
 import './modules/scroll';
-import './modules/form';
 import './modules/cards';
 import './modules/coaches';
 import './modules/tab';

@@ -1,34 +1,26 @@
-const item = document.querySelectorAll('.coaches__info');
-const catalogItem = document.querySelectorAll('.coaches__item');
-const swiper = document.getElementsByClassName('swiper')[0];
-const coachesPreviews = Array.from(
-    swiper.getElementsByClassName('coaches__preview')
-);
-
-
-const cardNames = coachesPreviews
-    .map((coachesPreview) => coachesPreview.querySelector('h3'))
-    .flat();
-
-const showPreview = () => {
-  for (let i = 0; i < item.length; i++) {
-    item[i].style.zIndex = '-1';
-  }
-  for (let i = 0; i < item.length; i++) {
-    cardNames[i].style.display = 'block';
-  }
+const removeTabindex = () => {
+  const coachItems = Array.from(document.querySelectorAll('.coaches__item'));
+  coachItems.forEach((i) => {
+    i.setAttribute('tabindex', 0);
+  });
+  coachItems
+      .filter((item, index) => {
+        if (window.innerWidth < 768) {
+          return index < 1;
+        }
+        if (window.innerWidth >= 768 && window.innerWidth < 1200) {
+          return index < 2;
+        }
+        if (window.innerWidth >= 1200) {
+          return index < 4;
+        }
+      })
+      .forEach((i) => i.setAttribute('tabindex', -1));
 };
 
-showPreview();
+window.addEventListener('resize', () => {
+  removeTabindex();
+});
 
-for (let i = 0; i < catalogItem.length; i++) {
-  setTimeout(1000);
-  catalogItem[i].onmouseover = function () {
-    cardNames[i].style.display = 'none';
-    item[i].style.zIndex = '1';
-  };
-  catalogItem[i].onmouseout = function () {
-    cardNames[i].style.display = 'block';
-    item[i].style.zIndex = '-1';
-  };
-}
+window.innerWidth;
+setTimeout(() => removeTabindex(), 2000);

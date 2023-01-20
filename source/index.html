@@ -73,7 +73,7 @@
           <div class="about__visual">
             <div class="about__img">
               <picture>
-                <source media="(min-width: 1199px)"
+                <source media="(min-width: 1200px)"
                   srcset="./img/about/about-photo-desk.webp 1x, ./img/about/about-photo-desk@2x.webp 2x">
                 <source media="(min-width: 768px)"
                   srcset="./img/about/about-photo-tab.webp 1x, ./img/about/about-photo-tab@2x.webp 2x">
@@ -84,11 +84,18 @@
 
             <div class="about__vid">
               <div class="about__vid-poster">
+                <picture>
+                  <source media="(min-width: 1200px)"
+                    srcset="./img/about/about-vid-desk.webp 1x, ./img/about/about-vid-desk@2x.webp 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="./img/about/about-vid-tab.webp 1x, ./img/about/about-vid-tab@2x.webp 2x">
+                  <img class="about__img-gym" width="320" height="167" src="./img/about/about-vid-mob.webp"
+                    srcset="./img/about/about-vid-mob@2x.webp 2x" alt="Видео-экскурсия.">
+                </picture>
+
                 <a class="about__vid-link" href="https://www.youtube.com/watch?v=9TZXsZItgdw" target="_blank"></a>
               </div>
-              <div class="about__vid-container" id="vidwrap">
-
-              </div>
+              <div class="about__vid-container" id="vidwrap"></div>
               <button class="about__vid-play about__vid-play--hidden" type="button" aria-label="Смотреть видео">
               </button>
             </div>
@@ -223,6 +230,14 @@
             <a class="super-games__application" href="#">заполнить заявку</a>
           </div>
           <div class="super-games__img">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="./img/games/games-desk.webp 1x, ./img/games/games-desk@2x.webp 2x">
+              <source media="(min-width: 768px)"
+                srcset="./img/games/games-tab.webp 1x, ./img/games/games-tab@2x.webp 2x">
+              <img class="super-games__img-photo" width="290" height="292" src="./img/games/games-mob.webp"
+                srcset="./img/games/games-mob@2x.webp 2x" alt="спортсмен.">
+            </picture>
           </div>
         </div>
       </section>
@@ -230,210 +245,210 @@
         <div class="coaches__container">
           <h2>Тренеры</h2>
 
+          <div class="coaches__arrows-container">
+            <div class="swiper">
+              <ul class="coaches__list reset-list">
+                <li class="coaches__item" tabindex="0">
+                  <div class="coaches__preview">
+                    <h3>Анна&nbsp;Павлова</h3>
 
-          <div class="swiper">
-            <ul class="coaches__list reset-list">
-              <li class="coaches__item">
-                <div class="coaches__preview">
-                  <h3>Анна&nbsp;Павлова</h3>
+                    <img class="coaches__img" width="260" height="294" src="./img/catalog/item-desk-1.webp"
+                      srcset="./img/catalog/item-desk-1@2x.webp 2x" alt="фото тренера.">
 
-                  <img class="coaches__img" width="260" height="294" src="./img/catalog/item-desk-1.webp"
-                    srcset="./img/catalog/item-desk-1@2x.webp 2x" alt="фото тренера.">
+                  </div>
+                  <div class="coaches__info">
+                    <h3>Анна Павлова</h3>
+                    <h4>CrossFit</h4>
+                    <ul class="coaches__info-list reset-list">
+                      <li class="coaches__info-item">
+                        Certified Level 3&nbsp;Trainer
+                      </li>
+                      <li class="coaches__info-item">
+                        Победитель чемпионата России по&nbsp;CrossFit
+                      </li>
+                      <li class="coaches__info-item">
+                        Опыт — 6&nbsp;лет
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="coaches__item" tabindex="0">
+                  <div class="coaches__preview">
+                    <h3>Алексей&nbsp;Лавров</h3>
 
-                </div>
-                <div class="coaches__info">
-                  <h3>Анна Павлова</h3>
-                  <h4>CrossFit</h4>
-                  <ul class="coaches__info-list reset-list">
-                    <li class="coaches__info-item">
-                      Certified Level 3&nbsp;Trainer
-                    </li>
-                    <li class="coaches__info-item">
-                      Победитель чемпионата России по&nbsp;CrossFit
-                    </li>
-                    <li class="coaches__info-item">
-                      Опыт — 6&nbsp;лет
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="coaches__item">
-                <div class="coaches__preview">
-                  <h3>Алексей&nbsp;Лавров</h3>
+                    <img class="coaches__img" width="260" height="294" src="./img/catalog/item-desk-2.webp"
+                      srcset="./img/catalog/item-desk-2@2x.webp 2x" alt="фото тренера.">
 
-                  <img class="coaches__img" width="260" height="294" src="./img/catalog/item-desk-2.webp"
-                    srcset="./img/catalog/item-desk-2@2x.webp 2x" alt="фото тренера.">
+                  </div>
+                  <div class="coaches__info">
+                    <h3>Алексей&nbsp;Лавров</h3>
+                    <h4>CrossFit</h4>
+                    <ul class="coaches__info-list reset-list">
+                      <li class="coaches__info-item">
+                        Certified Level 3&nbsp;Trainer
+                      </li>
+                      <li class="coaches__info-item">
+                        Победитель чемпионата России по&nbsp;CrossFit
+                      </li>
+                      <li class="coaches__info-item">
+                        Опыт — 6 лет
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="coaches__item" tabindex="0">
+                  <div class="coaches__preview">
+                    <h3>Александр&nbsp;Пашков</h3>
 
-                </div>
-                <div class="coaches__info">
-                  <h3>Алексей&nbsp;Лавров</h3>
-                  <h4>CrossFit</h4>
-                  <ul class="coaches__info-list reset-list">
-                    <li class="coaches__info-item">
-                      Certified Level 3&nbsp;Trainer
-                    </li>
-                    <li class="coaches__info-item">
-                      Победитель чемпионата России по&nbsp;CrossFit
-                    </li>
-                    <li class="coaches__info-item">
-                      Опыт — 6 лет
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="coaches__item">
-                <div class="coaches__preview">
-                  <h3>Александр&nbsp;Пашков</h3>
+                    <img class="coaches__img" width="260" height="294" src="./img/catalog/item-desk-3.webp"
+                      srcset="./img/catalog/item-desk-3@2x.webp 2x" alt="фото тренера.">
 
-                  <img class="coaches__img" width="260" height="294" src="./img/catalog/item-desk-3.webp"
-                    srcset="./img/catalog/item-desk-3@2x.webp 2x" alt="фото тренера.">
+                  </div>
+                  <div class="coaches__info">
+                    <h3>Александр&nbsp;Пашков</h3>
+                    <h4>CrossFit</h4>
+                    <ul class="coaches__info-list reset-list">
+                      <li class="coaches__info-item">
+                        Certified Level 3&nbsp;Trainer
+                      </li>
+                      <li class="coaches__info-item">
+                        Победитель чемпионата России по&nbsp;CrossFit
+                      </li>
+                      <li class="coaches__info-item">
+                        Опыт — 6 лет
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="coaches__item" tabindex="0">
+                  <div class="coaches__preview">
+                    <h3>Мария&nbsp;Кетова</h3>
 
-                </div>
-                <div class="coaches__info">
-                  <h3>Александр&nbsp;Пашков</h3>
-                  <h4>CrossFit</h4>
-                  <ul class="coaches__info-list reset-list">
-                    <li class="coaches__info-item">
-                      Certified Level 3&nbsp;Trainer
-                    </li>
-                    <li class="coaches__info-item">
-                      Победитель чемпионата России по&nbsp;CrossFit
-                    </li>
-                    <li class="coaches__info-item">
-                      Опыт — 6 лет
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="coaches__item">
-                <div class="coaches__preview">
-                  <h3>Мария&nbsp;Кетова</h3>
+                    <img class="coaches__img" width="260" height="294" src="./img/catalog/item-desk-4.webp"
+                      srcset="./img/catalog/item-desk-4@2x.webp 2x" alt="фото тренера.">
 
-                  <img class="coaches__img" width="260" height="294" src="./img/catalog/item-desk-4.webp"
-                    srcset="./img/catalog/item-desk-4@2x.webp 2x" alt="фото тренера.">
+                  </div>
+                  <div class="coaches__info">
+                    <h3>Мария&nbsp;Кетова</h3>
+                    <h4>CrossFit</h4>
+                    <ul class="coaches__info-list reset-list">
+                      <li class="coaches__info-item">
+                        Certified Level 3&nbsp;Trainer
+                      </li>
+                      <li class="coaches__info-item">
+                        Победитель чемпионата России по&nbsp;CrossFit
+                      </li>
+                      <li class="coaches__info-item">
+                        Опыт — 6 лет
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="coaches__item" tabindex="0">
+                  <div class="coaches__preview">
+                    <h3>Анна&nbsp;Павлова</h3>
 
-                </div>
-                <div class="coaches__info">
-                  <h3>Мария&nbsp;Кетова</h3>
-                  <h4>CrossFit</h4>
-                  <ul class="coaches__info-list reset-list">
-                    <li class="coaches__info-item">
-                      Certified Level 3&nbsp;Trainer
-                    </li>
-                    <li class="coaches__info-item">
-                      Победитель чемпионата России по&nbsp;CrossFit
-                    </li>
-                    <li class="coaches__info-item">
-                      Опыт — 6 лет
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="coaches__item">
-                <div class="coaches__preview">
-                  <h3>Анна&nbsp;Павлова</h3>
+                    <img class="coaches__img" width="260" height="294" src="./img/catalog/item-desk-1.webp"
+                      srcset="./img/catalog/item-desk-1@2x.webp 2x" alt="фото тренера.">
 
-                  <img class="coaches__img" width="260" height="294" src="./img/catalog/item-desk-1.webp"
-                    srcset="./img/catalog/item-desk-1@2x.webp 2x" alt="фото тренера.">
+                  </div>
+                  <div class="coaches__info">
+                    <h3>Анна&nbsp;Павлова</h3>
+                    <h4>CrossFit</h4>
+                    <ul class="coaches__info-list reset-list">
+                      <li class="coaches__info-item">
+                        Certified Level 3&nbsp;Trainer
+                      </li>
+                      <li class="coaches__info-item">
+                        Победитель чемпионата России по&nbsp;CrossFit
+                      </li>
+                      <li class="coaches__info-item">
+                        Опыт — 6 лет
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="coaches__item" tabindex="0">
+                  <div class="coaches__preview">
+                    <h3>Анна&nbsp;Павлова</h3>
 
-                </div>
-                <div class="coaches__info">
-                  <h3>Анна&nbsp;Павлова</h3>
-                  <h4>CrossFit</h4>
-                  <ul class="coaches__info-list reset-list">
-                    <li class="coaches__info-item">
-                      Certified Level 3&nbsp;Trainer
-                    </li>
-                    <li class="coaches__info-item">
-                      Победитель чемпионата России по&nbsp;CrossFit
-                    </li>
-                    <li class="coaches__info-item">
-                      Опыт — 6 лет
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="coaches__item">
-                <div class="coaches__preview">
-                  <h3>Анна&nbsp;Павлова</h3>
+                    <img class="coaches__img" width="260" height="294" src="./img/catalog/item-desk-1.webp"
+                      srcset="./img/catalog/item-desk-1@2x.webp 2x" alt="фото тренера.">
 
-                  <img class="coaches__img" width="260" height="294" src="./img/catalog/item-desk-1.webp"
-                    srcset="./img/catalog/item-desk-1@2x.webp 2x" alt="фото тренера.">
+                  </div>
+                  <div class="coaches__info">
+                    <h3>Анна&nbsp;Павлова</h3>
+                    <h4>CrossFit</h4>
+                    <ul class="coaches__info-list reset-list">
+                      <li class="coaches__info-item">
+                        Certified Level 3&nbsp;Trainer
+                      </li>
+                      <li class="coaches__info-item">
+                        Победитель чемпионата России по&nbsp;CrossFit
+                      </li>
+                      <li class="coaches__info-item">
+                        Опыт — 6 лет
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="coaches__item" tabindex="0">
+                  <div class="coaches__preview">
+                    <h3>Анна&nbsp;Павлова</h3>
 
-                </div>
-                <div class="coaches__info">
-                  <h3>Анна&nbsp;Павлова</h3>
-                  <h4>CrossFit</h4>
-                  <ul class="coaches__info-list reset-list">
-                    <li class="coaches__info-item">
-                      Certified Level 3&nbsp;Trainer
-                    </li>
-                    <li class="coaches__info-item">
-                      Победитель чемпионата России по&nbsp;CrossFit
-                    </li>
-                    <li class="coaches__info-item">
-                      Опыт — 6 лет
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="coaches__item">
-                <div class="coaches__preview">
-                  <h3>Анна&nbsp;Павлова</h3>
+                    <img class="coaches__img" width="260" height="294" src="./img/catalog/item-desk-1.webp"
+                      srcset="./img/catalog/item-desk-1@2x.webp 2x" alt="фото тренера.">
 
-                  <img class="coaches__img" width="260" height="294" src="./img/catalog/item-desk-1.webp"
-                    srcset="./img/catalog/item-desk-1@2x.webp 2x" alt="фото тренера.">
+                  </div>
+                  <div class="coaches__info">
+                    <h3>Анна&nbsp;Павлова</h3>
+                    <h4>CrossFit</h4>
+                    <ul class="coaches__info-list reset-list">
+                      <li class="coaches__info-item">
+                        Certified Level 3&nbsp;Trainer
+                      </li>
+                      <li class="coaches__info-item">
+                        Победитель чемпионата России по&nbsp;CrossFit
+                      </li>
+                      <li class="coaches__info-item">
+                        Опыт — 6 лет
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="coaches__item" tabindex="0">
+                  <div class="coaches__preview">
+                    <h3>Анна&nbsp;Павлова</h3>
 
-                </div>
-                <div class="coaches__info">
-                  <h3>Анна&nbsp;Павлова</h3>
-                  <h4>CrossFit</h4>
-                  <ul class="coaches__info-list reset-list">
-                    <li class="coaches__info-item">
-                      Certified Level 3&nbsp;Trainer
-                    </li>
-                    <li class="coaches__info-item">
-                      Победитель чемпионата России по&nbsp;CrossFit
-                    </li>
-                    <li class="coaches__info-item">
-                      Опыт — 6 лет
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="coaches__item">
-                <div class="coaches__preview">
-                  <h3>Анна&nbsp;Павлова</h3>
+                    <img class="coaches__img" width="260" height="294" src="./img/catalog/item-desk-1.webp"
+                      srcset="./img/catalog/item-desk-1@2x.webp 2x" alt="фото тренера.">
 
-                  <img class="coaches__img" width="260" height="294" src="./img/catalog/item-desk-1.webp"
-                    srcset="./img/catalog/item-desk-1@2x.webp 2x" alt="фото тренера.">
+                  </div>
+                  <div class="coaches__info">
+                    <h3>Анна&nbsp;Павлова</h3>
+                    <h4>CrossFit</h4>
+                    <ul class="coaches__info-list reset-list">
+                      <li class="coaches__info-item">
+                        Certified Level 3&nbsp;Trainer
+                      </li>
+                      <li class="coaches__info-item">
+                        Победитель чемпионата России по&nbsp;CrossFit
+                      </li>
+                      <li class="coaches__info-item">
+                        Опыт — 6 лет
+                      </li>
+                    </ul>
+                  </div>
 
-                </div>
-                <div class="coaches__info">
-                  <h3>Анна&nbsp;Павлова</h3>
-                  <h4>CrossFit</h4>
-                  <ul class="coaches__info-list reset-list">
-                    <li class="coaches__info-item">
-                      Certified Level 3&nbsp;Trainer
-                    </li>
-                    <li class="coaches__info-item">
-                      Победитель чемпионата России по&nbsp;CrossFit
-                    </li>
-                    <li class="coaches__info-item">
-                      Опыт — 6 лет
-                    </li>
-                  </ul>
-                </div>
+                </li>
+              </ul>
+            </div>
 
-              </li>
-            </ul>
+            <div class="coaches__swiper-button-prev" tabindex="0">
+            </div>
+            <div class="coaches__swiper-button-next" tabindex="0">
+            </div>
           </div>
-
-          <div class="coaches__swiper-button-prev" tabindex="0">
-          </div>
-          <div class="coaches__swiper-button-next" tabindex="0">
-          </div>
-
         </div>
 
       </section>
@@ -513,7 +528,7 @@
               </div>
               <div class="promo__left-img">
                 <picture>
-                  <source media="(min-width: 1199px)"
+                  <source media="(min-width: 1200px)"
                     srcset="./img/promo/promo-desk.webp 1x, ./img/promo/promo-desk@2x.webp 2x">
                   <source media="(min-width: 768px)"
                     srcset="./img/promo/promo-tab.webp 1x, ./img/promo/promo-tab@2x.webp 2x">
@@ -552,22 +567,26 @@
             <div class="swiper">
               <ul class="feedback__list reset-list">
                 <li class="feedback__item">
-                  <picture>
-                    <img class="feedback__img" src="./img/feedback/ava-desk.png" width="80" height="80"
-                      alt="аватар пользователя.">
-                  </picture>
-                  <h3>Анна Орлова</h3>
+                  <div class="feedback__item-name">
+                    <picture>
+                      <img class="feedback__img" src="./img/feedback/ava-desk.png" width="80" height="80"
+                        alt="аватар пользователя.">
+                    </picture>
+                    <h3>Анна Орлова</h3>
+                  </div>
                   <p>«Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры
                     обновляют,
                     персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет&nbsp;очередей»</p>
                 </li>
 
                 <li class="feedback__item">
-                  <picture>
-                    <img class="feedback__img" src="./img/feedback/ava-desk.png" width="80" height="80"
-                      alt="аватар пользователя.">
-                  </picture>
-                  <h3>Анна Орлова</h3>
+                  <div class="feedback__item-name">
+                    <picture>
+                      <img class="feedback__img" src="./img/feedback/ava-desk.png" width="80" height="80"
+                        alt="аватар пользователя.">
+                    </picture>
+                    <h3>Анна Орлова</h3>
+                  </div>
                   <p>«Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры
                     обновляют,
                     персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет&nbsp;очередей»</p>
@@ -595,7 +614,8 @@
                   </div>
                   <div class="form__field">
                     <label>
-                      <input type="tel" id="phone-mask" name="phone" placeholder="Телефон" minlength="11" maxlength="11"
+                      <input type="tel" id="phone-mask" name="phone" data-placeholder="+7(XXX)XXXXXXX"
+                        pattern="\+7\(\d{3}\)\d{3}\d{4}" title="+7(xxx)xxxxxxx" placeholder="Телефон" maxlength="14"
                         required>
                     </label>
                   </div>

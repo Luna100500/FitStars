@@ -44,7 +44,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 39px;
+  margin-bottom: 48px;
 
   @include vp-767 {
     width: 100%;
@@ -71,7 +71,8 @@
 .subscription__period-list {
   display: flex;
   position: relative;
-  margin-bottom: 12px;
+  margin-bottom: -9px;
+  flex-wrap: wrap;
 
   @include vp-767 {
     width: 100%;
@@ -83,7 +84,7 @@
   position: absolute;
   content: "";
   right: 50%;
-  bottom: -12px;
+  bottom: 0;
   width: 87%;
   border: 1px solid #787878;
   z-index: 10;
@@ -95,16 +96,61 @@
 }
 
 .subscription__period-item {
-  margin: 0 18px;
+  margin: 0 18px 13px;
+  position: relative;
 
   @include vp-1199 {
-    margin: 0 21px;
+    margin: 0 21px 13px;
   }
 
   @include vp-767 {
-    margin: 0 -6px;
+    margin: 0 -6px 13px;
   }
 }
+
+// .subscription__period-item:first-child::after {
+//   position: absolute;
+//   content: "";
+//   right: 13px;
+//   bottom: -12px;
+//   width: 126px;
+//   border: 1px solid #787878;
+//   z-index: 10;
+
+//   @include vp-767 {
+//     width: 100%;
+//   }
+// }
+
+// .subscription__period-item::after {
+//   position: absolute;
+//   content: "";
+//   right: 50%;
+//   bottom: -12px;
+//   width: 140%;
+//   border: 1px solid #787878;
+//   z-index: 10;
+//   transform: translateX(50%);
+//   opacity: 1;
+
+//   @include vp-767 {
+//     width: 100%;
+//   }
+// }
+
+// .subscription__period-item:last-child::after {
+//   position: absolute;
+//   content: "";
+//   left: -97px;
+//   bottom: -12px;
+//   width: 134px;
+//   border: 1px solid #787878;
+//   z-index: 10;
+
+//   @include vp-767 {
+//     width: 100%;
+//   }
+// }
 
 .subscription__period-button {
   @include roboto-condensed(400, 20px, 30px, $color-sapphire);
@@ -113,6 +159,7 @@
   opacity: 0.5;
   cursor: pointer;
   user-select: none;
+  padding-top: 0;
 
   @include vp-1199 {
     @include roboto-condensed(400, 18px, 27px, $color-sapphire);
@@ -136,9 +183,25 @@
   }
 }
 
+// .subscription__period-item::after {
+//   position: absolute;
+//   content: "";
+//   right: 50%;
+//   bottom: -12px;
+//   width: 87%;
+//   border: 1px solid #787878;
+//   z-index: 10;
+//   transform: translateX(50%);
+
+//   @include vp-767 {
+//     width: 100%;
+//   }
+// }
+
+
 .subscription__period-button--active {
   @include roboto-condensed(400, 20px, 30px, $color-sapphire);
-  position: relative;
+  // position: relative;
   opacity: 1;
   cursor: auto;
 }

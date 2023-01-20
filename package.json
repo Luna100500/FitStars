@@ -55,8 +55,7 @@
     "sass": "1.53.0",
     "stylelint": "13.13.1",
     "webpack": "4.42.0",
-    "webpack-stream": "5.2.1",
-    "imask": "6.4.3"
+    "webpack-stream": "5.2.1"
   },
   "engines": {
     "node": ">=16.15.1"
